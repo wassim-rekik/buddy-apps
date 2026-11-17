@@ -1,0 +1,77 @@
+:root {
+  --bg-top: #FFF1E6;
+  --bg-bottom: #F4E2FA;
+  --card: #FFFFFF;
+  --ink: #2D2440;
+  --ink-soft: #6E6287;
+  --line: #E9DDF2;
+  --accent: #8B5CFF;
+  --accent-2: #FF5FA2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-top: #1E1830;
+    --bg-bottom: #2A1F3D;
+    --card: #2F2645;
+    --ink: #F4EEF8;
+    --ink-soft: #BFB3D6;
+    --line: #43385C;
+    --accent: #B39BFF;
+    --accent-2: #FF8CBC;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(var(--bg-top), var(--bg-bottom)) fixed;
+  background-color: var(--bg-bottom);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Avenir Next", "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 48px; }
+
+header.app { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+header.app img { width: 72px; height: 72px; border-radius: 18px; box-shadow: 0 6px 18px rgba(45, 36, 64, 0.18); }
+header.app h1 { margin: 0; font-size: 28px; line-height: 1.2; }
+header.app p { margin: 2px 0 0; color: var(--ink-soft); font-size: 15px; }
+
+.card {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 24px 22px;
+  box-shadow: 0 8px 28px rgba(45, 36, 64, 0.08);
+  margin-bottom: 20px;
+}
+.card > :first-child { margin-top: 0; }
+.card > :last-child { margin-bottom: 0; }
+
+h2 { font-size: 21px; margin: 28px 0 8px; line-height: 1.3; }
+h3 { font-size: 17px; margin: 22px 0 4px; }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 22px; }
+li { margin-bottom: 6px; }
+a { color: var(--accent); text-underline-offset: 2px; }
+.muted { color: var(--ink-soft); font-size: 15px; }
+
+.summary {
+  border-left: 4px solid var(--accent-2);
+  padding: 4px 0 4px 14px;
+  margin: 0 0 8px;
+}
+
+nav.links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+nav.links a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+footer { text-align: center; color: var(--ink-soft); font-size: 14px; margin-top: 32px; }
+footer a { color: var(--ink-soft); }
